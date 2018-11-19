@@ -4,7 +4,7 @@ package utility;
 		public static String server="smtp.gmail.com";
 		public static String from = "automationadapt18@gmail.com";
 		public static String password = "selenium@123";
-		public static String[] to ={"Anurag.Kumar@adapt-india.com","vtripathi85@gmail.com"};
+		public static String[] to ={"Kumar@adapt-india.com","vtripathi85@gmail.com"};
 		public static String subject = "Test Selenium Report";
 		public static String messageBody ="TestMessage";
 		public static String attachmentPath="E:\\titan_logo_2.png";
