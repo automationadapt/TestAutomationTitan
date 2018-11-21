@@ -7,6 +7,7 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import BaseClasses.BaseTest;
+import pageclasses.CreateProjectPage;
 import pageclasses.HomePageHeader;
 import utility.TestUtil;
 
@@ -26,7 +27,8 @@ public class CreateProjectTest extends BaseTest
 			String Industry, String Manager, String StackHolder, String Sponser,
 			String Client, String AlertMessage, String DuplicateMSG,String DateValidation) throws InterruptedException
 	{
-		String msg= new HomePageHeader().fn_NavCreateProject().fn_CreateProject(ProjectCode,
+		String msg= new HomePageHeader().fn_NavProjectlist().fn_NavCreateProject().
+				fn_CreateProject(ProjectCode,
 				ProjectName, Departind, OfficeInd, Startdate, Enddate,
 				AStartdate, ProjectScope, Type, Industry, Manager, StackHolder,
 				Sponser, Client, AlertMessage, DuplicateMSG, DateValidation);

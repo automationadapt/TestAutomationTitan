@@ -61,11 +61,7 @@ public class CreateProjectPage extends BaseTest
 			String Client, String AlertMessage, String DuplicateMSG,
 			String DateValidation) throws InterruptedException
 	{
-
-		wait.until(ExpectedConditions.elementToBeClickable(
-				driver.findElement(By.xpath("//button[@id='CreateProject']"))));
-		driver.findElement(By.xpath("//button[@id='CreateProject']")).click();
-		waitforProgressBar();
+	
 		type("ProjectCodeTB_ID", ProjectCode);
 		driver.findElement(By.id(OR.getProperty("ProjectCodeTB_ID"))).sendKeys(Keys.TAB);
 		actualAlertText = meancheck();
