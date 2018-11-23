@@ -29,7 +29,6 @@ public class HomePageHeader extends BaseTest {
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath(OR.getProperty("LinkProject_XPATH")))));
 		Actions actObj = new Actions(driver);
 		actObj.click(driver.findElement(By.xpath(OR.getProperty("LinkProject_XPATH")))).build().perform();
-		waitforProgressBar();
 		ProjectList ObjProjectList = new ProjectList();
 		return ObjProjectList;
 		
