@@ -17,8 +17,8 @@ public class ProjectDetail extends BaseTest {
 		vikas.moveToElement(driver.findElement(By.xpath(OR.getProperty("TaskTab_XPATH")))).click().build().perform();
 //		click("TaskTab_XPATH");
 		System.out.println("After Task");
-		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(OR.getProperty("LinkNewTaskButton_XPATH"))))); 
-		click("LinkNewTaskButton_XPATH");
+		wait.until(ExpectedConditions.elementToBeClickable(driver.findElement(By.xpath(OR.getProperty("NewTaskButton_XPATH"))))); 
+		click("NewTaskButton_XPATH");
 //		waitforProgressBar();
 		CreateTaskPage objCreateTaskPage= new CreateTaskPage();
 		return objCreateTaskPage; 
