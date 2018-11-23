@@ -22,8 +22,8 @@ public class ProjectList extends BaseTest {
 
 	public static ProjectDetail fn_navProjectDetails() throws InterruptedException{
 //		new HomePageHeader().fn_NavProjectlist();
-//		waitforProgressBar();
-		System.out.println("click before");
+		waitforProgressBar();
+		
 //		Thread.sleep(7000);
 //		Actions objAct= new Actions(driver);
 //		objAct.moveToElement(driver.findElement(By.xpath(OR.getProperty("LinkProjectName_XPATH")))); 
@@ -35,8 +35,7 @@ public class ProjectList extends BaseTest {
 		wait.until(ExpectedConditions.visibilityOf(driver.findElement(By.xpath("//table[@id='myFirstTable']//tbody/tr[1]/td[2]/a"))));
 		driver.findElement(By.linkText(value)).click();
 		
-		
-		System.out.println("click after");
+//		waitforProgressBar();
 		ProjectDetail objProjectDetail=new ProjectDetail();
 		return objProjectDetail;
 	}

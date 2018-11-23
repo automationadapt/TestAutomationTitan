@@ -21,8 +21,7 @@ public class CreateTaskTest extends CreateTaskPage {
 	public void fn_CreateTaskTest(String TaskName, String Description, String StartDate,String DueDate, String Priority, String Msg) throws InterruptedException
 	{
 		
-		new HomePageHeader().fn_NavProjectlist().fn_navProjectDetails(); 
-//		System.out.println(Msg);
+		new HomePageHeader().fn_NavProjectlist().fn_navProjectDetails().fn_NavProjectTask(); 
 	
 	}
 	
