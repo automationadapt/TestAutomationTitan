@@ -1,6 +1,8 @@
 package testcases;
 
 import org.openqa.selenium.By;
+import org.testng.Assert;
+import org.testng.Reporter;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -21,7 +23,10 @@ public class CreateTaskTest extends CreateTaskPage {
 	public void fn_CreateTaskTest(String TaskName, String Description, String StartDate,String DueDate, String Priority, String Msg) throws InterruptedException
 	{
 		
-		new HomePageHeader().fn_NavProjectlist().fn_navProjectDetails().fn_NavProjectTask().fn_CreateTask(TaskName, Description, StartDate, DueDate, Priority); 
+		String alertMsg= new HomePageHeader().fn_NavProjectlist().fn_navProjectDetails().fn_NavProjectTask().fn_CreateTask(TaskName, Description, StartDate, DueDate, Priority);
+		Assert.assertEquals(Msg, alertMsg );
+		
+		
 	
 	}
 	

@@ -269,7 +269,8 @@ public class BaseTest
 			log.debug("Error" + locator);
 			log.debug(t.getMessage());
 			Reporter.log(t.getMessage());
-			driver.switchTo().alert().accept();
+			
+//			driver.switchTo().alert().accept();
 		}
 	}
 
