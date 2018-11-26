@@ -17,17 +17,17 @@ public class CreateTaskTest extends CreateTaskPage {
 		login("techadmin");
 	}
 
-	@Test(dataProvider = "getData", priority = 1)
+	@Test(dataProvider = "getDataOne", priority = 1)
 	public void fn_CreateTaskTest(String TaskName, String Description, String StartDate,String DueDate, String Priority, String Msg) throws InterruptedException
 	{
 		
-		new HomePageHeader().fn_NavProjectlist().fn_navProjectDetails().fn_NavProjectTask(); 
+		new HomePageHeader().fn_NavProjectlist().fn_navProjectDetails().fn_NavProjectTask().fn_CreateTask(TaskName, Description, StartDate, DueDate, Priority); 
 	
 	}
 	
 	
 	@DataProvider
-	public Object[][] getData()
+	public Object[][] getDataOne()
 	{
 		return TestUtil.getData("NewTask");
 	}
